@@ -15,5 +15,5 @@ python3 app.py
 
 ## Outlook():
 
-![](static/images/showcase.jpeg)
+![](https://github.com/Nllai/Coding-Assessment/blob/master/static/images/showcase.jpeg?raw=true)
 ```
