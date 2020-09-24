@@ -1,0 +1,63 @@
+.background{
+    background: rgb(115,30,99);
+    background: linear-gradient(0deg, rgba(115,30,99,1) 38%, rgba(92,32,115,1) 76%);
+    opacity: 1;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo1{
+    float: left;
+    text-align: left;
+    max-width: 4vw;
+}
+.logo2{
+    float: left;
+    text-align: left;
+    max-width: 13vw;
+}
+
+.table{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    opacity: 1;
+    border-radius: 20px !important;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.subject{
+    background-color: #5C2073;
+    color: white;
+    text-align: center;
+}
+.tabs .navbar-fixed-top{
+    opacity: 1;
+}
+
+.input{
+    background-color: #5C2073;
+}
+nav{
+    margin-top: 2vh;
+}
+
+.nav-head{
+    display: block;
+    color: white;
+    padding: 0;
+    list-style: none;
+    float: left;
+    margin-right: 2vw;
+    }
+
+
+.fixed {
+    position: relative;
+    width: 70%;
+    margin:auto;
+}
+
+.btn-outline-secondary:hover, .btn-outline-secondary:focus, .btn-outline-secondary:active, .btn-outline-secondary.active, .open>.dropdown-toggle.btn-outline-secondary {
+    color: #731E63;
+    background-color: #731E63;
+    border-color: #731E63;
+}

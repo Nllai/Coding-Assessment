@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+      </head>
+
+    <body class="background">
+
+        <nav class="navbar navbar-expand-lg navbar-light navbar-default navbar-fixed-top justify-content-between mt-3">
+          <div>
+            <img class="logo1" src="{{ url_for('static', filename='./images/logo1.jpg') }}" alt="logo1">
+            <img class="logo2" src="{{ url_for('static', filename='./images/logo2.jpg') }}" alt="logo2">
+          </div>
+          <ul class="navhead">  
+              <li class="nav-head"><a class="text-white align-middle" href="https://www.beatdapp.com/benefits/labels">Labels</a></li>
+              <li class="nav-head"><a class="text-white align-middle" href="https://blog.beatdapp.com/">Blog</a></li>
+              <li class="nav-head"><a class="text-white align-middle" href="https://www.beatdapp.com/press">Press</a></li>
+              <li class="nav-head"><a class="text-white align-middle" href="https://www.beatdapp.com/benefits/dsp-ott">DSPs & OTTs</a></li>
+              <li class="nav-head"><button class="text-white btn btn-outline-secondary" name="LOGIN">LOGIN</button></li>
+              <li class="nav-head"><button class="text-white btn btn-outline-secondary"name="REQUEST DEMO" style=background-color:#ED2784>REQUEST DEMO</button></li>
+          </ul>
+           
+        </nav>
+
+        <div class="container mt-5">
+          <h3 class="subject">Personal Expense Tracker</h3>
+        </div>
+
+        <div class="fixed">
+          <table class="table">
+              <thead class="tabs table-borderless">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Cost ($)</th>
+                  <th scope="col">Category</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"></th>
+                    <form action='/add_entry/' method="post">
+                      <td>
+                        <input name="name" class="input">
+                      </td>
+                      <td>
+                        <input name="cost" class="input">
+                      </td>
+                      <td>
+                        <input name="category" class="input"> &nbsp&nbsp
+                        <input class="text-white btn btn-outline-secondary" name="add" type="submit" value="ADD">
+                      </td>
+                    </form>
+                </tr>
+                {% for entry in data.values() %}
+                <tr>
+                  <th scope="row">{{loop.index}}</th>
+                  <td>{{entry.Name}}</td>
+                  <td>{{entry.Cost}}</td>
+                  <td>{{entry.Category}}
+                      <form class="text-right" action='/delete_entry/' method="post">
+                          <button class="text-white btn btn-outline-secondary" name="delete" type="submit" value="{{entry.Name, entry.Cost, entry.Category}}">
+                            REMOVE
+                          </button>
+                      </form>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+
+    </body>
+
+</html>
