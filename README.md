@@ -7,8 +7,13 @@ pip install -r requirements.txt
 ```
 
 ## Run
-
+Have python3 installed
 Use the following to start the tracker app.
 ```
-python app.py
+python3 app.py
+
+
+## Outlook():
+
+![](images/showcase.jpg)
 ```
